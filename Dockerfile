@@ -10,14 +10,14 @@ FROM alpine:3.8
 # docker-compose.yml and thelike.
 
 ENV SERVICE_NAME=ticker
-ENV SERVICE_PROCESSOR=/srv/ticker/processor
-ENV SUBSCRIPTIONS=/srv/ticker/subscriptions.txt
+ENV SERVICE_PROCESSOR=/srv/processor
+ENV SUBSCRIPTIONS=/srv/subscriptions.txt
 
 RUN apk add --no-cache bash jq gettext util-linux coreutils
 
 COPY --from=adapter /usr/local/bin/microservice-adapter-mqtt /usr/local/bin/microservice-adapter-mqtt
 
-WORKDIR /srv/ticker/
+WORKDIR /srv/
 COPY . .
 
 CMD ["microservice-adapter-mqtt"]
