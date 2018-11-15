@@ -17,7 +17,7 @@ services:
     depends_on:
       - mqtt
     build: .
-    image: quay.io/flaneurtv/micro-ticker
+    image: flaneurtv/micro-ticker
     environment:
       - "LOG_LEVEL=debug"
       - "LOG_LEVEL_MQTT=debug"
