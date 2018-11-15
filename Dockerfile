@@ -1,4 +1,4 @@
-FROM quay.io/flaneurtv/microservice-adapter-mqtt as adapter
+FROM flaneurtv/microservice-adapter-mqtt as adapter
 # We will be copying /usr/local/bin/microservice-adapter-mqtt from this image.
 
 FROM alpine:3.8
